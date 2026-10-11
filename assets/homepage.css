@@ -357,3 +357,51 @@ h1,
     bottom: 5rem;
   }
 }
+
+/* Collage cleanup: headlines always sit above the floating images,
+   and the images hug the edges so they frame the text instead of covering it */
+.t-welcome,
+.t-service {
+  position: relative;
+  overflow: hidden;
+}
+
+.t-welcome .t-container,
+.t-service .t-container {
+  position: relative;
+  z-index: 2;
+}
+
+.t-welcome-floated {
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+@media (min-width: 1201px) {
+  .t-parsifal { top: 1rem; left: 1.5rem; }
+  .t-deer { top: 6rem; right: 1.5rem; }
+  .t-human { bottom: 3rem; left: 1.5rem; }
+  .t-sun { bottom: 3rem; right: 1.5rem; }
+  .t-heart { top: 2rem; left: 1.5rem; }
+  .t-cup-phrase { top: 2rem; right: 1.5rem; }
+  .t-gold { bottom: 2rem; left: 1.5rem; }
+  .t-geometric { bottom: 2rem; right: 1.5rem; }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .t-welcome-floated img { max-width: 140px; height: auto; }
+  .t-parsifal { top: 1rem; left: 0; }
+  .t-deer { top: 5rem; right: 0; }
+  .t-human { bottom: 2rem; left: 0; }
+  .t-sun { bottom: 2rem; right: 0; }
+  .t-heart { top: 1.5rem; left: 0; }
+  .t-cup-phrase { top: 1.5rem; right: 0; }
+  .t-gold { bottom: 1.5rem; left: 0; }
+  .t-geometric { bottom: 1.5rem; right: 0; }
+}
+
+@media (max-width: 768px) {
+  .t-parsifal { top: 0.5rem; left: 0; }
+  .t-geometric { bottom: 0.5rem; }
+}
