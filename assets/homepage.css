@@ -358,8 +358,8 @@ h1,
   }
 }
 
-/* Collage cleanup: headlines always sit above the floating images,
-   and the images hug the edges so they frame the text instead of covering it */
+/* Collage: slapdash on purpose. Images tilt; some tuck under the
+   headline, a few sit on top and nick the edge of a word. */
 .t-welcome,
 .t-service {
   position: relative;
@@ -375,33 +375,48 @@ h1,
 .t-welcome-floated {
   top: 0;
   left: 0;
-  z-index: 1;
 }
 
+.t-welcome-floated img { z-index: 1; }
+
+.t-deer,
+.t-sun,
+.t-cup-phrase,
+.t-geometric { z-index: 3 !important; }
+
+.t-parsifal { transform: rotate(-4deg); }
+.t-deer { transform: rotate(5deg); }
+.t-human { transform: rotate(3deg); }
+.t-sun { transform: rotate(-6deg); }
+.t-heart { transform: rotate(-5deg); }
+.t-cup-phrase { transform: rotate(6deg); }
+.t-gold { transform: rotate(4deg); }
+.t-geometric { transform: rotate(-3deg); }
+
 @media (min-width: 1201px) {
-  .t-parsifal { top: 1rem; left: 1.5rem; }
-  .t-deer { top: 6rem; right: 1.5rem; }
-  .t-human { bottom: 3rem; left: 1.5rem; }
-  .t-sun { bottom: 3rem; right: 1.5rem; }
-  .t-heart { top: 2rem; left: 1.5rem; }
-  .t-cup-phrase { top: 2rem; right: 1.5rem; }
-  .t-gold { bottom: 2rem; left: 1.5rem; }
-  .t-geometric { bottom: 2rem; right: 1.5rem; }
+  .t-parsifal { top: 2rem; left: calc(50% - 600px); }
+  .t-deer { top: 7rem; right: calc(50% - 560px); }
+  .t-human { bottom: 4rem; left: calc(50% - 620px); }
+  .t-sun { bottom: 5rem; right: calc(50% - 580px); }
+  .t-heart { top: 8rem; left: calc(50% - 640px); }
+  .t-cup-phrase { top: 5rem; right: calc(50% - 600px); }
+  .t-gold { bottom: 2rem; left: calc(50% - 520px); }
+  .t-geometric { bottom: 3rem; right: calc(50% - 560px); }
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
-  .t-welcome-floated img { max-width: 140px; height: auto; }
-  .t-parsifal { top: 1rem; left: 0; }
-  .t-deer { top: 5rem; right: 0; }
-  .t-human { bottom: 2rem; left: 0; }
-  .t-sun { bottom: 2rem; right: 0; }
-  .t-heart { top: 1.5rem; left: 0; }
-  .t-cup-phrase { top: 1.5rem; right: 0; }
-  .t-gold { bottom: 1.5rem; left: 0; }
-  .t-geometric { bottom: 1.5rem; right: 0; }
+  .t-welcome-floated img { max-width: 150px; height: auto; }
+  .t-parsifal { top: 2.5rem; left: 2.5rem; }
+  .t-deer { top: 7rem; right: 2.5rem; }
+  .t-human { bottom: 3rem; left: 1rem; }
+  .t-sun { bottom: 4.5rem; right: 1.5rem; }
+  .t-heart { top: 9rem; left: 1.5rem; }
+  .t-cup-phrase { top: 6rem; right: 2rem; }
+  .t-gold { bottom: 2rem; left: 5rem; }
+  .t-geometric { bottom: 3rem; right: 2rem; }
 }
 
 @media (max-width: 768px) {
-  .t-parsifal { top: 0.5rem; left: 0; }
+  .t-parsifal { top: 0.5rem; left: 0.5rem; }
   .t-geometric { bottom: 0.5rem; }
 }
