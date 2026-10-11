@@ -497,3 +497,10 @@ h1,
 
   .cdc-labtx { font-size: 18px; }
 }
+
+/* Programs page on phones: one collage image per block instead of the full
+   stack. Desktop keeps every image. */
+@media (max-width: 768px) {
+  .cdc-s .cdc-cut:not(.front) { display: none !important; }
+  .cdc-s:not(:has(.front)) .cdc-cut:first-of-type { display: block !important; }
+}
