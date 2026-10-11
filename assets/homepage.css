@@ -510,3 +510,47 @@ h1,
     display: block !important;
   }
 }
+
+/* Vision + About Us on phones: the Milanote board does not load; a card
+   opens it full-screen in Milanote instead. Desktop keeps the embed. */
+.cdc-board-mobile { display: none; }
+
+@media (max-width: 768px) {
+  .iframe-container,
+  .floating-box { display: none !important; }
+
+  .main-content {
+    height: auto !important;
+    margin-top: 0 !important;
+    padding: 2.5rem 1.5rem 3.5rem !important;
+  }
+
+  .cdc-board-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    text-align: center;
+  }
+
+  .cdc-board-hint {
+    margin: 0;
+    font-family: 't-Dahlia', Georgia, serif;
+    font-size: 20px;
+    line-height: 1.35;
+  }
+
+  .cdc-board-btn {
+    display: inline-block;
+    font-family: 't-Carola', Georgia, serif;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-size: 20px;
+    padding: 14px 34px;
+    border-radius: 999px;
+    background: #fd7d54;
+    color: #040c01;
+    text-decoration: none;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .18);
+  }
+}
