@@ -394,6 +394,15 @@ h1,
 .t-geometric { transform: rotate(-3deg); }
 
 @media (min-width: 1201px) {
+  .t-welcome-floated img { height: auto; }
+  .t-parsifal { width: 300px; }
+  .t-deer { width: 170px; }
+  .t-human { width: 170px; }
+  .t-sun { width: 170px; }
+  .t-heart { width: 250px; }
+  .t-cup-phrase { width: 255px; }
+  .t-gold { width: 310px; }
+  .t-geometric { width: 200px; }
   .t-parsifal { top: 2rem; left: calc(50% - 600px); }
   .t-deer { top: 7rem; right: calc(50% - 560px); }
   .t-human { bottom: 4rem; left: calc(50% - 620px); }
@@ -405,15 +414,15 @@ h1,
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
-  .t-welcome-floated img { max-width: 150px; height: auto; }
-  .t-parsifal { top: 2.5rem; left: 2.5rem; }
-  .t-deer { top: 7rem; right: 2.5rem; }
-  .t-human { bottom: 3rem; left: 1rem; }
-  .t-sun { bottom: 4.5rem; right: 1.5rem; }
-  .t-heart { top: 9rem; left: 1.5rem; }
-  .t-cup-phrase { top: 6rem; right: 2rem; }
-  .t-gold { bottom: 2rem; left: 5rem; }
-  .t-geometric { bottom: 3rem; right: 2rem; }
+  .t-welcome-floated img { max-width: 210px; height: auto; }
+  .t-parsifal { width: 210px; top: 2rem; left: 1.5rem; }
+  .t-deer { width: 180px; top: 6.5rem; right: 1rem; }
+  .t-human { width: 175px; bottom: 2.5rem; left: 0.5rem; }
+  .t-sun { width: 175px; bottom: 4rem; right: 0.5rem; }
+  .t-heart { width: 210px; top: 8rem; left: 0.5rem; }
+  .t-cup-phrase { width: 205px; top: 5rem; right: 1rem; }
+  .t-gold { width: 210px; bottom: 2rem; left: 4rem; }
+  .t-geometric { width: 190px; bottom: 2.5rem; right: 1rem; }
 }
 
 @media (max-width: 768px) {
