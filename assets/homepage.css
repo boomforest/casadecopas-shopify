@@ -429,3 +429,18 @@ h1,
   .t-parsifal { top: 0.5rem; left: 0.5rem; }
   .t-geometric { bottom: 0.5rem; }
 }
+
+/* Programs page: label cards flow right under the "Artists feed the future"
+   copy instead of being pinned far below it */
+@media (min-width: 750px) {
+  .cdc-feed { min-height: auto !important; }
+  .cdc-feed .cdc-lab {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    display: inline-block;
+    vertical-align: top;
+    width: 30% !important;
+    margin: 4.5rem 1.5% 0;
+  }
+}
