@@ -449,7 +449,7 @@ h1,
 @media (max-width: 768px) {
   /* big display headlines: scale to the screen and never split a word */
   .t-display-xl {
-    font-size: min(120px, 21vw) !important;
+    font-size: min(120px, 19vw) !important;
     line-height: 0.92 !important;
     word-wrap: normal;
     overflow-wrap: normal;
