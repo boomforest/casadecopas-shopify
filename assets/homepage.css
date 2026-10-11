@@ -498,7 +498,7 @@ h1,
   .cdc-labtx { font-size: 18px; }
 }
 
-/* Programs page on phones: one hand-picked image between each text block
+/* Programs page on phones: one hand-picked image between each text block (v2)
    instead of the full collage stack. Desktop keeps every image. */
 @media (max-width: 768px) {
   .cdc-s .cdc-cut { display: none !important; }
