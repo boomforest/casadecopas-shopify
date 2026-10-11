@@ -498,9 +498,15 @@ h1,
   .cdc-labtx { font-size: 18px; }
 }
 
-/* Programs page on phones: one collage image per block instead of the full
-   stack. Desktop keeps every image. */
+/* Programs page on phones: one hand-picked image between each text block
+   instead of the full collage stack. Desktop keeps every image. */
 @media (max-width: 768px) {
-  .cdc-s .cdc-cut:not(.front) { display: none !important; }
-  .cdc-s:not(:has(.front)) .cdc-cut:first-of-type { display: block !important; }
+  .cdc-s .cdc-cut { display: none !important; }
+  .cdc-s .cdc-cut:has(img[src*="d53b71ee2f2b1e92418cd30054ea6082"]),
+  .cdc-s .cdc-cut:has(img[src*="imageformat-fullwidth-87903621"]),
+  .cdc-s .cdc-cut:has(img[src*="ece30e5103059006899cb6a1028fa09e"]),
+  .cdc-s .cdc-cut:has(img[src*="cdc-parsifal"]),
+  .cdc-s .cdc-cut:has(img[src*="f35bc44bf467e8cb098e536fa6da87f5"]) {
+    display: block !important;
+  }
 }
