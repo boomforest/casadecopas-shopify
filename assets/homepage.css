@@ -401,8 +401,8 @@ h1,
   .t-sun { width: 170px; }
   .t-heart { width: 250px; }
   .t-cup-phrase { width: 255px; }
-  .t-gold { width: 310px; }
-  .t-geometric { width: 200px; }
+  .t-gold { width: 420px; }
+  .t-geometric { width: 290px; }
   .t-parsifal { top: 2rem; left: calc(50% - 600px); }
   .t-deer { top: 7rem; right: calc(50% - 560px); }
   .t-human { bottom: 4rem; left: calc(50% - 620px); }
@@ -421,8 +421,8 @@ h1,
   .t-sun { width: 175px; bottom: 4rem; right: 0.5rem; }
   .t-heart { width: 210px; top: 8rem; left: 0.5rem; }
   .t-cup-phrase { width: 205px; top: 5rem; right: 1rem; }
-  .t-gold { width: 210px; bottom: 2rem; left: 4rem; }
-  .t-geometric { width: 190px; bottom: 2.5rem; right: 1rem; }
+  .t-gold { width: 300px; max-width: 300px !important; bottom: 2rem; left: 3rem; }
+  .t-geometric { width: 260px; max-width: 260px !important; bottom: 2rem; right: 1rem; }
 }
 
 @media (max-width: 768px) {
