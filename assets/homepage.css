@@ -444,3 +444,56 @@ h1,
     margin: 4.5rem 1.5% 0;
   }
 }
+
+/* ---------- Phone fixes ---------- */
+@media (max-width: 768px) {
+  /* big display headlines: scale to the screen and never split a word */
+  .t-display-xl {
+    font-size: min(120px, 21vw) !important;
+    line-height: 0.92 !important;
+    word-wrap: normal;
+    overflow-wrap: normal;
+    word-break: keep-all;
+    hyphens: none;
+  }
+
+  .t-display {
+    font-size: min(90px, 19vw) !important;
+    word-wrap: normal;
+    overflow-wrap: normal;
+  }
+
+  .t-h2 {
+    font-size: min(50px, 10.5vw) !important;
+    line-height: 1.05 !important;
+  }
+
+  /* collage sections: no forced tall screens, just room for the images */
+  .t-welcome,
+  .t-service {
+    min-height: auto;
+    padding: 9rem 0 10rem;
+  }
+
+  /* black "invitation" block: copy sits above the pixel art, not on it */
+  .t-about {
+    min-height: auto;
+    padding-bottom: 300px;
+    background-size: 280px auto;
+  }
+
+  .t-about .t-w-3\/4 { width: 100%; }
+
+  .t-about p {
+    font-size: 22px !important;
+    line-height: 1.3;
+  }
+
+  /* Programs page: readable body copy on a phone */
+  .cdc-b {
+    font-size: 18px !important;
+    line-height: 1.45;
+  }
+
+  .cdc-labtx { font-size: 18px; }
+}
