@@ -1,0 +1,24 @@
+{%- comment -%}
+  Candid Seal of Transparency (dynamic widget). The image updates itself when the Seal changes.
+  Usage: {% render 'candid-seal', size: 96 %}
+{%- endcomment -%}
+{%- liquid
+  assign seal_size = size | default: 80
+-%}
+<a
+  class="candid-seal"
+  aria-label="Casa de Copas Foundation on Candid: Seal of Transparency"
+  href="https://app.candid.org/profile/16539912/casa-de-copas-foundation-41-3360812/?pkId=97245f03-1936-4e78-a0d4-d88091d065dc"
+  target="_blank"
+  rel="noopener"
+  style="display:inline-block;line-height:0;"
+>
+  <img
+    src="https://widgets.guidestar.org/prod/v1/pdp/transparency-seal/16539912/svg"
+    alt="Candid Seal of Transparency"
+    width="{{ seal_size }}"
+    height="{{ seal_size }}"
+    loading="lazy"
+    style="width:{{ seal_size }}px;height:auto;"
+  >
+</a>
