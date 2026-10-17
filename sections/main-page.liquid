@@ -21,6 +21,15 @@
   <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     {{ page.content }}
   </div>
+  {%- if page.handle == 'support' -%}
+    <div class="candid-seal-block" style="margin-top:3rem;text-align:center;">
+      {% render 'candid-seal', size: 120 %}
+      <p class="caption" style="margin-top:1rem;">
+        Casa de Copas Foundation holds Candid's Seal of Transparency.
+        <a href="https://app.candid.org/profile/16539912/casa-de-copas-foundation-41-3360812/?pkId=97245f03-1936-4e78-a0d4-d88091d065dc" target="_blank" rel="noopener">See our full profile</a>, including financials, board and programs.
+      </p>
+    </div>
+  {%- endif -%}
 </div>
 
 {% schema %}
