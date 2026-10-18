@@ -1,3 +1,37 @@
+{%- comment -%}
+  "Follow the line": the reading order of the site, in the same order as the main nav.
+  Virgil comes last on purpose: he's where people go with questions once they've seen the rest.
+{%- endcomment -%}
+<style>
+  .cdc-path { background: #d9c8b8; padding: 2.75rem 16px 3.25rem; text-align: center; }
+  .cdc-path__label { font-family: 't-Carola', serif; color: #fd6854; font-size: 34px; letter-spacing: .04em; margin: 0 0 1.75rem; }
+  .cdc-path__line { list-style: none; margin: 0 auto; padding: 0; max-width: 980px; display: flex; justify-content: space-between; position: relative; }
+  .cdc-path__line::before { content: ""; position: absolute; left: 6%; right: 6%; top: 9px; height: 2px; background: #fd6854; }
+  .cdc-path__stop { position: relative; flex: 1; display: flex; flex-direction: column; align-items: center; gap: .6rem; }
+  .cdc-path__dot { width: 20px; height: 20px; border-radius: 50%; background: #d9c8b8; border: 2px solid #fd6854; position: relative; z-index: 1; }
+  .cdc-path__stop:first-child .cdc-path__dot { background: #fd6854; }
+  .cdc-path__stop a { color: #1d1a22; text-decoration: none; font-size: 21px; line-height: 1.15; }
+  .cdc-path__stop a:hover { color: #fd6854; }
+  .cdc-path__note { font-size: 14px; color: #6b5d52; margin-top: -.3rem; }
+  @media (max-width: 749px) {
+    .cdc-path__label { font-size: 28px; margin-bottom: 1.25rem; }
+    .cdc-path__line { flex-direction: column; align-items: flex-start; max-width: 260px; gap: 1.1rem; }
+    .cdc-path__line::before { left: 9px; right: auto; top: 10px; bottom: 10px; width: 2px; height: auto; }
+    .cdc-path__stop { flex-direction: row; gap: .9rem; align-items: center; text-align: left; }
+    .cdc-path__note { margin: 0 0 0 .1rem; }
+  }
+</style>
+<nav id="path" class="cdc-path" aria-label="Follow the line">
+  <p class="cdc-path__label">Follow the line</p>
+  <ol class="cdc-path__line">
+    <li class="cdc-path__stop"><span class="cdc-path__dot"></span><a href="/pages/vision">Vision</a></li>
+    <li class="cdc-path__stop"><span class="cdc-path__dot"></span><a href="/pages/about-us">About Us</a></li>
+    <li class="cdc-path__stop"><span class="cdc-path__dot"></span><a href="/pages/programs">Programs</a></li>
+    <li class="cdc-path__stop"><span class="cdc-path__dot"></span><a href="/pages/support">Support</a></li>
+    <li class="cdc-path__stop"><span class="cdc-path__dot"></span><a href="/pages/virgil">Virgil</a><span class="cdc-path__note">questions</span></li>
+  </ol>
+</nav>
+
 <div id="welcome" class="t-welcome t-section t-text-center">
   <div class="t-container mx-auto">
     <h2 class="t-h2">Casa de Copas is a nonprofit that funds records that would not otherwise get made, and puts
