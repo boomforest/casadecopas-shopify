@@ -12,6 +12,36 @@
   <noscript>{{ 'component-mega-menu.css' | asset_url | stylesheet_tag }}</noscript>
 {%- endif -%}
 <script src="{{ 'cdc-infinity-v3.js' | file_url }}" defer></script>
+{%- comment -%}
+  Virgil sits to the right of the ∞ on desktop (the ∞ link is added by cdc-infinity-v3.js).
+  Virgil stays in the main menu so phones still find him in the drawer; on desktop the
+  inline-menu copy is hidden so he only appears once, beside the ∞.
+{%- endcomment -%}
+<style>
+  .header__virgil{position:absolute;top:50%;left:calc(70.5% + 66px);transform:translateY(-50%);font-family:'t-Dahlia',serif;font-weight:600;font-size:2.4rem;letter-spacing:.03em;text-transform:uppercase;line-height:1;color:rgb(var(--color-foreground));text-decoration:none;padding:.4rem .6rem}
+  .header__virgil:hover,.header__virgil:focus-visible{text-decoration:underline;text-underline-offset:.3rem}
+  .header__inline-menu li:has(> a[href$="/pages/virgil"]),
+  .header__inline-menu li:has(> header-menu a[href$="/pages/virgil"]){display:none}
+  @media screen and (max-width:989px){.header__virgil{display:none}}
+</style>
+<script>
+  (function () {
+    function place() {
+      var inf = document.querySelector('.header__infinity');
+      if (!inf) return false;
+      if (!document.querySelector('.header__virgil')) {
+        var a = document.createElement('a');
+        a.className = 'header__virgil';
+        a.href = '/pages/virgil';
+        a.textContent = 'Virgil';
+        inf.insertAdjacentElement('afterend', a);
+      }
+      return true;
+    }
+    if (place()) return;
+    var tries = 0, t = setInterval(function () { if (place() || ++tries > 50) clearInterval(t); }, 100);
+  })();
+</script>
 {%- if settings.cart_type == "drawer" -%}
   {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
   {{ 'component-cart.css' | asset_url | stylesheet_tag }}
