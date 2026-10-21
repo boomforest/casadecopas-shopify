@@ -13,7 +13,7 @@
 
 <div id="service" class="t-service t-section t-text-center">
   <div class="t-container mx-auto">
-    <h1 class="t-display-xl">The wound heals in service</h1>
+    <h1 class="t-display-xl">{% if request.locale.iso_code == 'es' %}La herida sana en el servicio{% else %}The wound heals in service{% endif %}</h1>
   </div>
   <div class="t-welcome-floated">
     <img width="188px" src="{{ 'heart.jpg' | asset_url }}" class="t-heart" />
