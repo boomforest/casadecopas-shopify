@@ -2,7 +2,7 @@
   <div class="t-container mx-auto t-hero-content">
     <h1 class="t-display t-text-orange">{% if request.locale.iso_code == 'es' %}PARA EL ACTO{% else %}FOR THE ACT{% endif %}</h1>
     <img src="{{ 'hero-cover.jpg' | asset_url }}" />
-    <h1 class="t-display t-text-orange">OF CREATION</h1>
+    <h1 class="t-display t-text-orange">{% if request.locale.iso_code == 'es' %}DE CREACIÓN{% else %}OF CREATION{% endif %}</h1>
   </div>
   <img src="{{ 'hero-bg.png' | asset_url }}" class="t-hero-bg" />
 </div>
