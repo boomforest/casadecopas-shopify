@@ -41,7 +41,7 @@
   <div class="t-container mx-auto t-text-center">
     <h1 class="t-display-xl">{% if request.locale.iso_code == 'es' %}UN BIEN COMÚN PARA LA CREACIÓN{% else %}A COMMONS FOR CREATION{% endif %}</h1>
     <img src="{{ 'footer-sun.jpg' | asset_url }}" class="t-my-5" />
-    <p>CASA DE COPAS EST. 2025</p>
+    <p>{% if request.locale.iso_code == 'es' %}CASA DE COPAS DESDE 2025{% else %}CASA DE COPAS EST. 2025{% endif %}</p>
     <div class="t-mt-5">{% render 'candid-seal', size: 80 %}</div>
     <div class="t-mt-10">
       <a class="t-text-3xl" href="https://www.instagram.com/casadecopasmx/">{% if request.locale.iso_code == 'es' %}Síguenos en Instagram{% else %}Follow us on Instagram{% endif %} -></a>
