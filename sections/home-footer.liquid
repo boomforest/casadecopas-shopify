@@ -32,7 +32,7 @@
         next record. <br />{% endif %}</p>
     </div>
     <div class="t-mt-10">
-      <a class="t-text-3xl" href="https://www.instagram.com/casadecopasmx/">Follow us on Instagram -></a>
+      <a class="t-text-3xl" href="https://www.instagram.com/casadecopasmx/">{% if request.locale.iso_code == 'es' %}Síguenos en Instagram{% else %}Follow us on Instagram{% endif %} -></a>
     </div>
   </div>
 </div>
@@ -44,7 +44,7 @@
     <p>CASA DE COPAS EST. 2025</p>
     <div class="t-mt-5">{% render 'candid-seal', size: 80 %}</div>
     <div class="t-mt-10">
-      <a class="t-text-3xl" href="https://www.instagram.com/casadecopasmx/">Follow us on Instagram -></a>
+      <a class="t-text-3xl" href="https://www.instagram.com/casadecopasmx/">{% if request.locale.iso_code == 'es' %}Síguenos en Instagram{% else %}Follow us on Instagram{% endif %} -></a>
     </div>
   </div>
 </div>
