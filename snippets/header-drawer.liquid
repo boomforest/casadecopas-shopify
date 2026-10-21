@@ -130,7 +130,7 @@
                 class="menu-drawer__account link focus-inset h5 medium-hide large-up-hide"
               >
                 {% render 'icon-account' %}
-                Members
+                {% if request.locale.iso_code == 'es' %}Miembros{% else %}Members{% endif %}
               </a>
             {%- endif -%}
             {%- if localization.available_countries or localization.available_languages -%}
