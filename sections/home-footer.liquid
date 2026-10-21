@@ -26,10 +26,10 @@
 <div id="about" class="t-about t-section">
   <div class="t-container mx-auto">
     <div class="t-w-3/4">
-      <p>Casa de Copas is an invitation to join a movement. <br />
+      <p>{% if request.locale.iso_code == 'es' %}Casa de Copas es una invitación a unirse a un movimiento. <br />No un lugar para visitar: algo a lo que pertenecer. <br />Los artistas financian el trabajo de los artistas que vienen detrás de ellos, y lo que gana la red vuelve al siguiente disco. <br />{% else %}Casa de Copas is an invitation to join a movement. <br />
         Not somewhere to visit — something to belong to. <br />
         Artists fund the work of the artists coming up behind them, and what the network earns goes back into the
-        next record. <br /></p>
+        next record. <br />{% endif %}</p>
     </div>
     <div class="t-mt-10">
       <a class="t-text-3xl" href="https://www.instagram.com/casadecopasmx/">Follow us on Instagram -></a>
