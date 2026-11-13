@@ -1,0 +1,65 @@
+{%- comment -%}
+  copas.app username → Love.
+  Saves the buyer's copas.app username onto the cart as the attribute
+  `copas_username`. Shopify carries cart attributes onto the order, and
+  copas.app's shopify-order webhook reads it there and credits the member
+  one Love per dollar of the order's net proceeds.
+
+  Saved through /cart/update.js as the buyer types, so it survives whichever
+  door they check out through (cart page, drawer, notification). "Buy it now"
+  skips the cart; those orders are matched by email instead, server side.
+
+  Usage: {% render 'copas-username', field_id: 'unique-id' %}
+{%- endcomment -%}
+{%- assign cu_id = field_id | default: 'CopasUsername' -%}
+<div class="copas-username field" data-copas-username>
+  <label class="copas-username__label" for="{{ cu_id }}">
+    Your copas.app username <span class="copas-username__hint">(earns Love)</span>
+  </label>
+  <input
+    class="field__input copas-username__input"
+    type="text"
+    id="{{ cu_id }}"
+    name="attributes[copas_username]"
+    value="{{ cart.attributes.copas_username | escape }}"
+    placeholder="e.g. CDC333"
+    autocomplete="off"
+    autocapitalize="characters"
+    spellcheck="false"
+    maxlength="40"
+  >
+  <p class="copas-username__note">
+    One Love for every dollar this order brings the Foundation.
+    No account yet? Make one at <a href="https://copas.app" target="_blank" rel="noopener">copas.app</a> with the same email and it finds you.
+  </p>
+</div>
+<style>
+  .copas-username { display:flex; flex-direction:column; gap:6px; margin:14px 0; text-align:left; }
+  .copas-username__label { font-size:1.4rem; }
+  .copas-username__hint { opacity:.65; }
+  .copas-username__input { border:1.5px solid rgba(26,14,6,.35); border-radius:999px; padding:10px 18px; font-size:1.5rem; background:transparent; width:100%; }
+  .copas-username__note { font-size:1.2rem; opacity:.7; margin:0; line-height:1.4; }
+</style>
+<script>
+  (function () {
+    if (window.__copasUsernameBound) return;
+    window.__copasUsernameBound = true;
+    var timer;
+    function save(value) {
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        fetch('{{ routes.cart_update_url }}.js', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({ attributes: { copas_username: value.trim() } })
+        }).catch(function () {});
+        document.querySelectorAll('.copas-username__input').forEach(function (el) {
+          if (el.value !== value) el.value = value;
+        });
+      }, 400);
+    }
+    document.addEventListener('input', function (e) {
+      if (e.target && e.target.classList && e.target.classList.contains('copas-username__input')) save(e.target.value);
+    });
+  })();
+</script>
