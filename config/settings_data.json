@@ -113,7 +113,7 @@
     "social_facebook_link": "",
     "social_instagram_link": "https://www.instagram.com/casadecopasmx/",
     "social_youtube_link": "https://www.youtube.com/@casadecopasfoundation",
-    "social_tiktok_link": "",
+    "social_tiktok_link": "https://www.tiktok.com/@casadecopas",
     "social_twitter_link": "",
     "social_snapchat_link": "",
     "social_pinterest_link": "",
@@ -396,7 +396,7 @@
   "platform_customizations": {
     "custom_css": [
       ".card--card,.card--standard .card__inner {border: 0 !important;}",
-      ".product-form__input input[type='radio'].disabled + label {display: none; }"
+      ".product-form__input input[type=\"radio\"].disabled + label {display: none;}"
     ]
   }
 }
