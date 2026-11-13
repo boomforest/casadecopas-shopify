@@ -37,6 +37,8 @@
         </cart-note>
       {%- endif -%}
 
+      {%- render 'copas-username', field_id: 'CopasUsername-cart' -%}
+
       <div class="cart__blocks">
         {% for block in section.blocks %}
           {%- case block.type -%}

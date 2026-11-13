@@ -448,6 +448,7 @@
         </form>
       </cart-drawer-items>
       <div class="drawer__footer">
+        {%- render 'copas-username', field_id: 'CopasUsername-drawer' -%}
         {%- if settings.show_cart_note -%}
           <details id="Details-CartDrawer">
             <summary>
